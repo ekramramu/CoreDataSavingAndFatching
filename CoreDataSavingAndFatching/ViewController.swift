@@ -8,18 +8,74 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    var tasks:[Task] = []
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        tableView.delegate = self
+        tableView.dataSource = self
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.black
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        getData()
+        tableView.reloadData()
     }
-
+    func getData() {
+        
+        do {
+            
+            tasks = try context.fetch(Task.fetchRequest())
+        } catch {
+            
+            print("Error in Fatching Data")
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tasks.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        let task = tasks[indexPath.row]
+        
+        
+        if let myName = task.name {
+            
+            cell.textLabel?.text = myName
+        }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+       
+        if editingStyle == .delete {
+       
+            let task = tasks[indexPath.row]
+            context.delete(task)
+            
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            
+            do {
+                
+                tasks = try context.fetch(Task.fetchRequest())
+            } catch {
+                print("Fatcing error")
+            }
+       
+        }
+        tableView.reloadData()
+    }
 
 }
 

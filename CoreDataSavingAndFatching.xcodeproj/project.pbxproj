@@ -13,6 +13,7 @@
 		4D719F622041F56300C2AF33 /* CoreDataSavingAndFatching.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D719F602041F56300C2AF33 /* CoreDataSavingAndFatching.xcdatamodeld */; };
 		4D719F642041F56300C2AF33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D719F632041F56300C2AF33 /* Assets.xcassets */; };
 		4D719F672041F56300C2AF33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D719F652041F56300C2AF33 /* LaunchScreen.storyboard */; };
+		4D719F6F2041F5C000C2AF33 /* addTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D719F6E2041F5C000C2AF33 /* addTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4D719F632041F56300C2AF33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D719F662041F56300C2AF33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D719F682041F56300C2AF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D719F6E2041F5C000C2AF33 /* addTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				4D719F592041F56300C2AF33 /* AppDelegate.swift */,
 				4D719F5B2041F56300C2AF33 /* ViewController.swift */,
+				4D719F6E2041F5C000C2AF33 /* addTaskViewController.swift */,
 				4D719F5D2041F56300C2AF33 /* Main.storyboard */,
 				4D719F632041F56300C2AF33 /* Assets.xcassets */,
 				4D719F652041F56300C2AF33 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D719F622041F56300C2AF33 /* CoreDataSavingAndFatching.xcdatamodeld in Sources */,
+				4D719F6F2041F5C000C2AF33 /* addTaskViewController.swift in Sources */,
 				4D719F5C2041F56300C2AF33 /* ViewController.swift in Sources */,
 				4D719F5A2041F56300C2AF33 /* AppDelegate.swift in Sources */,
 			);

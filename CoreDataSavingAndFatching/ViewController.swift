@@ -18,6 +18,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.tableView.backgroundColor = UIColor(white: 12, alpha: 1)
+        navigationItem.title = "iLIST"
         navigationItem.leftBarButtonItem?.tintColor = UIColor.black
     }
 
@@ -75,6 +77,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
        
         }
         tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
 
 }

@@ -83,22 +83,23 @@
                                     <action selector="addTaskBUttonWasPressed:" destination="sFO-Ee-nPV" eventType="touchUpInside" id="ytq-uH-7Bi"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x9Y-YC-vuu">
-                                <rect key="frame" x="87.5" y="203.5" width="200" height="60"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your List " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x9Y-YC-vuu">
+                                <rect key="frame" x="20" y="253.5" width="335" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="JVg-6z-ysi"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="i1F-DV-86A"/>
+                                    <constraint firstAttribute="height" constant="60" id="39u-mR-vEV"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="x9Y-YC-vuu" firstAttribute="centerY" secondItem="kMS-zz-3Xn" secondAttribute="centerY" multiplier="0.85" id="0H2-cN-hmF"/>
+                            <constraint firstItem="x9Y-YC-vuu" firstAttribute="centerX" secondItem="kMS-zz-3Xn" secondAttribute="centerX" id="Drs-jx-Wa6"/>
+                            <constraint firstItem="Vcp-ZW-WzG" firstAttribute="trailing" secondItem="x9Y-YC-vuu" secondAttribute="trailing" constant="20" id="FGL-m3-fYk"/>
                             <constraint firstItem="y3U-dN-obo" firstAttribute="centerX" secondItem="kMS-zz-3Xn" secondAttribute="centerX" id="RAC-CI-h5t"/>
-                            <constraint firstItem="x9Y-YC-vuu" firstAttribute="centerY" secondItem="kMS-zz-3Xn" secondAttribute="centerY" multiplier="0.7" id="TX7-Jt-L2D"/>
-                            <constraint firstItem="x9Y-YC-vuu" firstAttribute="centerX" secondItem="kMS-zz-3Xn" secondAttribute="centerX" id="aQa-N8-7M4"/>
+                            <constraint firstItem="x9Y-YC-vuu" firstAttribute="leading" secondItem="Vcp-ZW-WzG" secondAttribute="leading" constant="20" id="Sie-Ub-vg7"/>
                             <constraint firstItem="y3U-dN-obo" firstAttribute="centerY" secondItem="kMS-zz-3Xn" secondAttribute="centerY" id="ev0-Bi-YYt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vcp-ZW-WzG"/>
